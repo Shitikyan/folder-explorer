@@ -1,28 +1,22 @@
 import { FC } from "react";
-import { icons } from "../../config/icons";
+import { icons } from "config/icons";
+import { IFileProps } from "./types";
 
 import "./file.scss";
 
-interface IFileProps {
-    name: string;
-    id: string;
-    selected: string;
-    setSelected: (id: string) => void;
-}
-
-const File: FC<IFileProps> = ({ name, selected, setSelected, id }) => {
-    return (
-        <div
-            className="file"
-            onClick={() => setSelected(id)}
-            style={{
-                background: selected === id ? "#99bbf2" : "transparent",
-            }}
-        >
-            <img src={icons.file} alt="file" />
-            <span>{name}</span>
-        </div>
-    );
+const File: FC<IFileProps> = ({ file, selectedElementId, onElementSelect }) => {
+  return (
+    <div
+      className="file"
+      onClick={() => onElementSelect(file.id)}
+      style={{
+        background: selectedElementId === file.id ? "#99bbf2" : "transparent",
+      }}
+    >
+      <img src={icons.file} alt="file" />
+      <span>{file.name}</span>
+    </div>
+  );
 };
 
 export default File;

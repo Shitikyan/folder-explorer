@@ -1,10 +1,11 @@
 .file {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  user-select: none;
 
-    & > img {
-        width: 15px;
-        height: 15px;
-    }
+  & > img {
+    width: 15px;
+    height: 15px;
+  }
 }

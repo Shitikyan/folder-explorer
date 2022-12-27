@@ -1,3 +1,14 @@
+* {
+  font-size: 16px;
+}
+
 .app {
-    width: 300px;
+  width: 300px;
+  padding: 10px;
+
+  .button-container {
+    display: flex;
+    column-gap: 10px;
+    margin-bottom: 10px;
+  }
 }

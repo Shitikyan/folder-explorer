@@ -1,21 +1,20 @@
 .folder {
+  width: fit-content;
+
+  .folder-content {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    column-gap: 5px;
+    user-select: none;
 
-    .folder-content {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-
-        & > img {
-            width: 15px;
-            height: 15px;
-        }
+    & > img {
+      width: 15px;
+      height: 15px;
     }
+  }
 
-    .folder-items-container {
-        width: 100%;
-        margin-left: 15px;
-    }
+  .folder-items-container {
+    width: 100%;
+    margin-left: 15px;
+  }
 }
